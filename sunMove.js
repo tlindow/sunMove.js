@@ -40,7 +40,7 @@ var board6 = new five.Board({
   port: "COM8"
 });
 
-var fps = 10; // how many frames per second do you want to try?
+var fps = 25; // how many frames per second do you want to try?
 
 board1.on("ready", function() {
 
@@ -58,27 +58,29 @@ board1.on("ready", function() {
     console.log("Strip 1 ready, let's go");
     strip1.color("black");
     //var current_colors = [0,1,2,3,4];
-    var current_pos = [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+    var current_pos = [2, 3, 4, 5, 10, 11, 12, 13, 18, 19, 20, 21, 26, 27, 28, 29];
 
     start1 = function() {
       blinker1 = setInterval(function() {
         strip1.color("black");
         current_pos.forEach((pos) => {
-          strip1.pixel(pos).color("#202020");
-        });
-        current_pos = current_pos.map((pos) => {
-          return pos += 8;
+          strip1.pixel(pos).color("white");
         });
 
         console.log(current_pos);
-        if (current_pos[1] >= 200) {
+        if (current_pos[15] >= 210) {
           console.log("Done!")
           strip1.color("black");
           strip1.show();
           clearInterval(blinker1);
           start2();
         }
+
         strip1.show();
+        current_pos = current_pos.map((pos) => {
+          return pos += 8;
+        });
+
       }, 1000 / fps);
     }
     start1();
@@ -101,20 +103,17 @@ board2.on("ready", function() {
     strip2.color("black");
     console.log("Strip 2 ready, let's go");
 
-    var current_pos = [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+    var current_pos = [2, 3, 4, 5, 10, 11, 12, 13, 18, 19, 20, 21, 26, 27, 28, 29];
 
     start2 = function() {
       blinker2 = setInterval(function() {
         strip2.color("black");
         current_pos.forEach((pos) => {
-          strip2.pixel(pos).color("#202020");
-        });
-        current_pos = current_pos.map((pos) => {
-          return pos += 8;
+          strip2.pixel(pos).color("white");
         });
 
         console.log(current_pos);
-        if (current_pos[1] >= 200) {
+        if (current_pos[15] >= 210) {
           console.log("Done!")
           strip2.color("black");
           strip2.show();
@@ -122,6 +121,9 @@ board2.on("ready", function() {
           start3();
         }
         strip2.show();
+        current_pos = current_pos.map((pos) => {
+          return pos += 8;
+        });
       }, 1000 / fps);
     }
   });
@@ -143,20 +145,18 @@ board3.on("ready", function() {
     strip3.color("black");
     console.log("Strip 3 ready, let's go");
 
-    var current_pos = [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+    var current_pos = [2, 3, 4, 5, 10, 11, 12, 13, 18, 19, 20, 21, 26, 27, 28, 29];
 
     start3 = function() {
       blinker3 = setInterval(function() {
         strip3.color("black");
         current_pos.forEach((pos) => {
-          strip3.pixel(pos).color("#202020");
-        });
-        current_pos = current_pos.map((pos) => {
-          return pos += 8;
+          strip3.pixel(pos).color("white");
         });
 
+
         console.log(current_pos);
-        if (current_pos[1] >= 200) {
+        if (current_pos[15] >= 210) {
           console.log("Done!")
           strip3.color("black");
           strip3.show();
@@ -164,6 +164,9 @@ board3.on("ready", function() {
           start4();
         }
         strip3.show();
+        current_pos = current_pos.map((pos) => {
+          return pos += 8;
+        });
       }, 1000 / fps);
     }
   });
@@ -185,20 +188,18 @@ board4.on("ready", function() {
     strip4.color("black");
     console.log("Strip 4 ready, let's go");
 
-    var current_pos = [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+    var current_pos = [2, 3, 4, 5, 10, 11, 12, 13, 18, 19, 20, 21, 26, 27, 28, 29];
 
     start4 = function() {
       blinker4 = setInterval(function() {
         strip4.color("black");
         current_pos.forEach((pos) => {
-          strip4.pixel(pos).color("#202020");
-        });
-        current_pos = current_pos.map((pos) => {
-          return pos += 8;
+          strip4.pixel(pos).color("white");
         });
 
+
         console.log(current_pos);
-        if (current_pos[1] >= 200) {
+        if (current_pos[15] >= 210) {
           console.log("Done!")
           strip4.color("black");
           strip4.show();
@@ -206,6 +207,9 @@ board4.on("ready", function() {
           start5();
         }
         strip4.show();
+        current_pos = current_pos.map((pos) => {
+          return pos += 8;
+        });
       }, 1000 / fps);
     }
   });
@@ -227,20 +231,17 @@ board5.on("ready", function() {
     strip5.color("black");
     console.log("Strip 5 ready, let's go");
 
-    var current_pos = [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+    var current_pos = [2, 3, 4, 5, 10, 11, 12, 13, 18, 19, 20, 21, 26, 27, 28, 29];
 
     start5 = function() {
       blinker5 = setInterval(function() {
         strip5.color("black");
         current_pos.forEach((pos) => {
-          strip5.pixel(pos).color("#202020");
-        });
-        current_pos = current_pos.map((pos) => {
-          return pos += 8;
+          strip5.pixel(pos).color("white");
         });
 
         console.log(current_pos);
-        if (current_pos[1] >= 200) {
+        if (current_pos[15] >= 210) {
           console.log("Done!")
           strip5.color("black");
           strip5.show();
@@ -248,6 +249,10 @@ board5.on("ready", function() {
           start6();
         }
         strip5.show();
+
+        current_pos = current_pos.map((pos) => {
+          return pos += 8;
+        });
       }, 1000 / fps);
     }
   });
@@ -269,26 +274,28 @@ board6.on("ready", function() {
     strip6.color("black");
     console.log("Strip 6 ready, let's go");
 
-    var current_pos = [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+    var current_pos = [2, 3, 4, 5, 10, 11, 12, 13, 18, 19, 20, 21, 26, 27, 28, 29];
 
     start6 = function() {
       blinker6 = setInterval(function() {
         strip6.color("black");
         current_pos.forEach((pos) => {
-          strip6.pixel(pos).color("#202020");
-        });
-        current_pos = current_pos.map((pos) => {
-          return pos += 8;
+          strip6.pixel(pos).color("white");
         });
 
+
         console.log(current_pos);
-        if (current_pos[1] >= 200) {
+        if (current_pos[15] >= 210) {
           console.log("Done!")
           strip6.color("black");
           strip6.show();
           clearInterval(blinker6);
         }
         strip6.show();
+
+        current_pos = current_pos.map((pos) => {
+          return pos += 8;
+        });
       }, 1000 / fps);
     }
   });
